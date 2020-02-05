@@ -1,0 +1,5 @@
+my_list = [1,2,3,4,5,6,7,8,9,10]
+y = 0  #need a counter _outside_ the loop so it doesn't reset during each loop
+for x in my_list:
+  print(y)
+  y = y + x
