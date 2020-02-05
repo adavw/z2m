@@ -1,0 +1,8 @@
+user = {
+  'name': 'Golem',
+  'age': 256,
+  'can_swim': False
+}
+
+for item in user.items():  #note the .items() dictionary method is called here and not in the print function, since item is not a dictionary
+  print(item)
