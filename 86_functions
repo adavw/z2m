@@ -1,0 +1,11 @@
+def highest_even(*args):
+  evens = []
+  for item in args:
+    if item % 2 == 0:
+      evens.append(item)
+  evens.sort()
+  return evens.pop()
+
+#test cases
+print(highest_even(10,2,3,4,8,11))
+print(highest_even(12,22,7,1,655,11))
