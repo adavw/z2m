@@ -1,0 +1,9 @@
+#create a class that inherits the 'list' class and overwrites the __len__ dunder method
+
+class SuperList(list):
+    def __len__(self):
+        return 1000
+
+superlist1 = SuperList()
+superlist1.append(5)
+print(len(superlist1))
