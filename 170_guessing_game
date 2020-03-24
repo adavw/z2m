@@ -1,0 +1,16 @@
+import sys, random
+
+if __name__ == '__main__':
+    first = int(sys.argv[1])
+    second = int(sys.argv[2])
+
+    num = random.randint(first, second)
+
+    print(f"The secret number is {num}.")
+    guess = int(input("Please enter your guess: "))
+    print(f"Your guess was {guess}.")
+
+    if guess == num:
+        print("Your guess was correct! Congratulations. You win!")
+    else:
+        print("Your guess was incorrect. Better luck next time!")
