@@ -1,0 +1,8 @@
+from translate import Translator
+
+translator = Translator(to_lang="fr")
+
+with open("lang.txt", mode='r') as file_in:
+    # print(file_in.readline())
+    translation = translator.translate(file_in.readline())
+    print(f"{translation}")
