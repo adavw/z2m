@@ -1,0 +1,25 @@
+'''Z2M Exercise 208: Image converter
+Utilize the Pillow library to convert an arbitrary collection of JPG files in a designated source directory
+and convert them to PNG files an a designated destination directory.'''
+
+import sys, os
+from PIL import Image
+
+source = sys.argv[1]  #sys.argv[0] is the script itself
+destination = sys.argv[2]
+
+# os.listdir(path='.')  #get a list of entries in the directory
+
+#exception handling block to catch the case where the destination folder already exists
+def mk_dest_dir():
+    try:
+        os.mkdir(destination)
+    except FileExistsError as error:
+        print(f'Destination folder already exists. \n {error}')
+
+def convert():
+    dir_list = os.listdir(source)
+    for x in dir_list:
+
+if __name__ == '__main__':
+    mk_dest_dir()
