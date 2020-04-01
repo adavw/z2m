@@ -1,14 +1,8 @@
-'''Z2M Exercise 208: Image converter
-Utilize the Pillow library to convert an arbitrary collection of JPG files in a designated source directory
-and convert them to PNG files an a designated destination directory.'''
-
-import sys, os
+import sys, os, re
 from PIL import Image
 
 source = sys.argv[1]  #sys.argv[0] is the script itself
 destination = sys.argv[2]
-
-# os.listdir(path='.')  #get a list of entries in the directory
 
 #exception handling block to catch the case where the destination folder already exists
 def mk_dest_dir():
@@ -19,7 +13,13 @@ def mk_dest_dir():
 
 def convert():
     dir_list = os.listdir(source)
+    dir_list.remove(".DS_Store")  #remove hidden directory services file from macOS
     for x in dir_list:
+        image = Image.open(source + '/' + x)
+        file_name = re.match(r"(^.+\.)", x)
+        image.save(destination + '/' + str(file_name.group(1)) + 'png', format='PNG')
+
 
 if __name__ == '__main__':
     mk_dest_dir()
+    convert()
