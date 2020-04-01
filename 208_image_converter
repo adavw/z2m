@@ -1,3 +1,7 @@
+'''Z2M Exercise 208: Image converter
+Utilize the Pillow library to convert an arbitrary collection of JPG files in a designated source directory
+and convert them to PNG files an a designated destination directory.'''
+
 import sys, os, re
 from PIL import Image
 
