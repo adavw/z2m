@@ -1,0 +1,4 @@
+import PyPDF2, sys
+
+'''Write wtr.pdf onto super.pdf'''
+
